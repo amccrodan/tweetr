@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  const article = $("#tweet-list article");
+  const tweetList = $("#tweet-list");
 
-  $(article).on("mouseenter", function() {
+  $(tweetList).on("mouseenter", "article", function() {
     const header = $(this).find($("header"));
     const icons = $(this).find($(".icons"));
     icons.addClass("tweet-hover");
     header.removeClass("faded");
-  }).on("mouseleave", function() {
+  }).on("mouseleave", "article", function() {
     const header = $(this).find($("header"));
     const icons = $(this).find($(".icons"));
     icons.removeClass("tweet-hover");
