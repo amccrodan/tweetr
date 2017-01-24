@@ -1,0 +1,56 @@
+#tweet-list {
+  margin: 0 2em 2em;
+  border-radius: 5px;
+  padding: 0;
+  border: 1px solid #eee;
+  vertical-align: center;
+}
+
+#tweet-list:hover {
+  border-color: #666666;
+}
+
+#tweet-list .faded {
+  opacity: 0.5;
+}
+
+#tweet-list .tweet header {
+  background-color: #eee;
+  padding: 0.5em;
+  border-radius: 5px 5px 0 0;
+}
+
+#tweet-list .tweet .avatar {
+  vertical-align: top;
+}
+
+#tweet-list .tweet .author {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#tweet-list .tweet .handle {
+  float: right;
+  color: #666666;
+}
+
+#tweet-list .tweet .tweet-body {
+  padding: 0.5em;
+}
+
+#tweet-list .tweet footer {
+  border-top: 1px solid #eee;
+  font-size: 0.8em;
+  padding: 0.5em;
+}
+
+#tweet-list .tweet .icons {
+  color: #00a087;
+  float: right;
+  display: none;
+  opacity: 0.5;
+}
+
+#tweet-list .tweet .icons.tweet-hover {
+  display: inline;
+}
