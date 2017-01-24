@@ -1,12 +1,11 @@
-#tweet-list {
+#tweet-list article {
   margin: 0 2em 2em;
   border-radius: 5px;
   padding: 0;
   border: 1px solid #eee;
-  vertical-align: center;
 }
 
-#tweet-list:hover {
+#tweet-list article:hover {
   border-color: #666666;
 }
 
@@ -27,6 +26,7 @@
 #tweet-list .tweet .author {
   font-size: 1.5em;
   font-weight: bold;
+  margin-left: 0.3em;
 }
 
 #tweet-list .tweet .handle {
