@@ -14,13 +14,16 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/new-tweet.css">
+    <link rel="stylesheet" href="/styles/tweet.css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script src="https://use.fontawesome.com/950079f346.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/tweet.js"></script>
   </head>
 
   <body>
@@ -40,6 +43,22 @@
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
+      </section>
+      <section id="tweet-list">
+
+        <article class="tweet">
+          <header class="faded">
+            <img class="avatar" src="https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png">
+            <span class="author">Bill Fields</span>
+            <span class="handle">@MrFields</span>
+          </header>
+          <p class="tweet-body">Tweet body</p>
+          <footer>
+            <span class="tweet-age">10 days ago</span>
+            <span class="icons"><i class="fa fa-flag"></i><i class="fa fa-retweet"></i><i class="fa fa-heart"></i></span>
+          </footer>
+        </article>
+
       </section>
     </main>
   </body>
