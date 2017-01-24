@@ -17,7 +17,11 @@
 
 .new-tweet .counter {
   font-style: italic;
-  color: #00a087;
+  color: #244751;
   float: right;
   line-height: 26px;
+}
+
+.new-tweet .counter.invalid {
+  color: #f00;
 }
