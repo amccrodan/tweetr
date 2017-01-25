@@ -9,21 +9,21 @@ function formatAge(creationTime) {
   const dateNow = Date.now();
   const elapsedTime = dateNow - creationTime;
 
-  switch(true) {
+  switch (true) {
     case (elapsedTime < msInMinute):
-      dateString = "Less than one minute"
-    break;
+      dateString = "Less than one minute";
+      break;
     case (elapsedTime < msInHour):
-      dateString = Math.floor(elapsedTime / msInMinute) + " minutes"
-    break;
+      dateString = Math.floor(elapsedTime / msInMinute) + " minutes";
+      break;
     case (elapsedTime < msInDay):
-      dateString = Math.floor(elapsedTime / msInHour) + " hours"
-    break;
+      dateString = Math.floor(elapsedTime / msInHour) + " hours";
+      break;
     case (elapsedTime < msInYear):
-      dateString = Math.floor(elapsedTime / msInDay) + " days"
-    break;
+      dateString = Math.floor(elapsedTime / msInDay) + " days";
+      break;
     default:
-      dateString = Math.floor(elapsedTime / msInYear) + " years"
+      dateString = Math.floor(elapsedTime / msInYear) + " years";
   }
 
   if (dateString.split(" ")[0] === "1") {
