@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(function() {
+$(function () {
 
   // Create tweet DOM representation
   function createHeader(tweetObject) {
@@ -62,7 +62,7 @@ $(function() {
 
     clearTweets();
 
-    tweets = tweets.sort(function(a, b) {
+    tweets = tweets.sort(function (a, b) {
       return b.created_at - a.created_at;
     });
 
@@ -72,9 +72,12 @@ $(function() {
   }
 
   function loadTweets() {
-    $.getJSON("/tweets", function(data) {
+    $.ajax({
+      url: "/tweets",
+      method: "GET"
+    }).then(function (data) {
       renderTweets(data);
-    })
+    });
   }
   loadTweets();
 
@@ -82,26 +85,32 @@ $(function() {
   $(".new-tweet form").submit(function (event) {
     event.preventDefault();
 
-    const numChars = $(this).find("textarea").val().length;
-
-    if (numChars === 0) {
-      alert("You may not submit an empty tweet.");
-      return;
-    }
+    const textArea = $(this).find("textarea")
+    const numChars = textArea.val().length;
 
     if (numChars > 140) {
       alert("Too many characters.");
       return;
     }
 
-    $.post("/tweets", $(this).serialize(), function(){
+    if (numChars === 0) {
+      alert("You may not submit an empty tweet.");
+      return;
+    }
+    // console.log($(this).serialize());
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $(this).serialize()
+    }).then(function () {
+      textArea.val("").trigger("keyup");
       loadTweets();
     });
   });
 
   // Compose button
-  $(".compose").on("click", function() {
-    $(".new-tweet").slideToggle(function() {
+  $(".compose").on("click", function () {
+    $(".new-tweet").slideToggle(function () {
       if ($(".new-tweet").is(":visible")) {
         $(".new-tweet").find("textarea").focus();
       }
