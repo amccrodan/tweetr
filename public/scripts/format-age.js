@@ -11,7 +11,7 @@ function formatAge(creationTime) {
 
   switch(true) {
     case (elapsedTime < msInMinute):
-      dateString = "Less than one minute ago"
+      dateString = "Less than one minute"
     break;
     case (elapsedTime < msInHour):
       dateString = Math.floor(elapsedTime / msInMinute) + " minutes"
