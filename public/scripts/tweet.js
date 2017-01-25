@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   const tweetList = $("#tweet-list");
 
   $(tweetList).on("mouseenter", "article", function() {
