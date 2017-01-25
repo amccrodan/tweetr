@@ -60,7 +60,7 @@ $(function () {
 
   function renderTweets(tweets) {
 
-    clearTweets();
+    //clearTweets();
 
     tweets = tweets.sort(function (a, b) {
       return b.created_at - a.created_at;
@@ -97,12 +97,16 @@ $(function () {
       alert("You may not submit an empty tweet.");
       return;
     }
-    // console.log($(this).serialize());
+
+    $(".container .loading").show();
+
     $.ajax({
       url: "/tweets",
       method: "POST",
       data: $(this).serialize()
     }).then(function () {
+      clearTweets();
+      $(".container .loading").hide();
       textArea.val("").trigger("keyup");
       loadTweets();
     });
