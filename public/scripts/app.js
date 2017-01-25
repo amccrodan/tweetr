@@ -114,10 +114,13 @@ $(function () {
 
   // Compose button
   $(".compose").on("click", function () {
-    $(".new-tweet").slideToggle(function () {
-      if ($(".new-tweet").is(":visible")) {
-        $(".new-tweet").find("textarea").focus();
-      }
-    });
+    const $newTweet = $(".new-tweet");
+    if (!$newTweet.is(':animated')) {
+      $newTweet.slideToggle(function () {
+        if ($newTweet.is(":visible")) {
+          $newTweet.find("textarea").focus();
+        }
+      });
+    }
   });
 });
