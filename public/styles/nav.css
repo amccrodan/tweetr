@@ -17,6 +17,11 @@
   float: left;
 }
 
+#nav-bar .bird-noise {
+  position: absolute;
+  -webkit-user-select: none;
+}
+
 #nav-bar .header {
   font-size: 200%;
   float: left;
