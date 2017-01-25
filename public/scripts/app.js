@@ -60,13 +60,11 @@ $(function () {
 
   function renderTweets(tweets) {
 
-    //clearTweets();
-
-    tweets = tweets.sort(function (a, b) {
+    const sortedTweets = tweets.sort(function (a, b) {
       return b.created_at - a.created_at;
     });
 
-    for (let tweetObject of tweets) {
+    for (let tweetObject of sortedTweets) {
       $('#tweet-list').append(createTweetElement(tweetObject));
     }
   }
@@ -85,7 +83,7 @@ $(function () {
   $(".new-tweet form").submit(function (event) {
     event.preventDefault();
 
-    const textArea = $(this).find("textarea")
+    const textArea = $(this).find("textarea");
     const numChars = textArea.val().length;
 
     if (numChars > 140) {
