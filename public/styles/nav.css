@@ -23,3 +23,21 @@
   line-height: 80px;
   margin-left: 10px;
 }
+
+#nav-bar .right-nav {
+  float: right;
+  margin-top: 10px;
+  height: 75%;
+}
+
+#nav-bar .compose {
+  opacity: 0.75;
+  background-color: white;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#nav-bar .compose:hover {
+  opacity: 1.0;
+}
