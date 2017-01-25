@@ -59,13 +59,8 @@ $(function () {
   }
 
   function renderTweets(tweets) {
-
-    const sortedTweets = tweets.sort(function (a, b) {
-      return b.created_at - a.created_at;
-    });
-
-    for (let tweetObject of sortedTweets) {
-      $('#tweet-list').append(createTweetElement(tweetObject));
+    for (let tweetObject of tweets) {
+      $('#tweet-list').prepend(createTweetElement(tweetObject));
     }
   }
 
