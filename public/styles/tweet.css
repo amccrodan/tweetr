@@ -1,5 +1,5 @@
 #tweet-list article {
-  margin: 0 2em 2em;
+  margin: 0 2em 1em;
   border-radius: 5px;
   padding: 0;
   border: 1px solid #eee;
@@ -36,6 +36,7 @@
 
 #tweet-list .tweet .tweet-body {
   padding: 0.5em;
+  word-wrap: break-word;
 }
 
 #tweet-list .tweet footer {
@@ -48,7 +49,7 @@
   color: #00a087;
   float: right;
   display: none;
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 #tweet-list .tweet .icons.tweet-hover {
