@@ -5,7 +5,9 @@ function messageBox(displayString, $this) {
   }
 
   $span = $("<span>").text(displayString).addClass("warning").appendTo($this);
-  $span.fadeOut(600, function () {
+  $this.parent().find("textarea").focus();
+
+  $span.fadeOut(800, function () {
     $span.remove();
   })
 }
