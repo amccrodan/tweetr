@@ -85,12 +85,12 @@ $(function () {
     const numChars = textArea.val().length;
 
     if (numChars > 140) {
-      alert("Too many characters.");
+      messageBox("Too many characters.", $(this));
       return;
     }
 
     if (numChars === 0) {
-      alert("You may not submit an empty tweet.");
+      messageBox("You may not submit an empty tweet.", $(this));
       return;
     }
 
