@@ -1,5 +1,11 @@
-function messageBox(displayString) {
+function messageBox(displayString, $this) {
 
+  if ($this.find(".warning").length !== 0) {
+    return;
+  }
 
-  $("<span").text(displayString).appendTo($(this)addClass("warning").parent());
+  $span = $("<span>").text(displayString).addClass("warning").appendTo($this);
+  $span.fadeOut(600, function () {
+    $span.remove();
+  })
 }
