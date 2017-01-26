@@ -5,6 +5,8 @@
   border: 1px solid #666666;
   padding: 0.5em;
   display: none; }
+  .new-tweet .warning {
+  color: red; }
   .new-tweet h2 {
     border-bottom: 1px solid #000;
     margin-top: 0; }

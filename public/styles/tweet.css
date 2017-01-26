@@ -6,10 +6,6 @@
   #tweet-list article:hover {
     border-color: #666666; }
 
-#tweet-list .warning {
-  position: relative;
-}
-
 #tweet-list .faded {
   opacity: 0.5; }
 

@@ -7,6 +7,9 @@
   display: none;
 }
 
+.new-tweet .warning {
+  color: red;
+}
 
 .new-tweet h2 {
   border-bottom: 1px solid #000;
