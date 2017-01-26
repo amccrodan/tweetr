@@ -1,0 +1,63 @@
+$main-grey: #eee;
+$nav-green: #00a087;
+
+#tweet-list {
+  article {
+    margin: 0 2em 1em;
+    border-radius: 5px;
+    padding: 0;
+    border: 1px solid $main-grey;
+    &:hover { border-color: #666666; }
+  }
+
+  .faded {
+    opacity: 0.5;
+  }
+
+  .tweet {
+    header {
+      background-color: $main-grey;
+      padding: 0.5em;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .avatar {
+      vertical-align: top;
+    }
+
+    .author {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-left: 0.3em;
+    }
+
+    .handle {
+      float: right;
+      color: #666666;
+    }
+
+    .tweet-body {
+      padding: 0.5em;
+      word-wrap: break-word;
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      font-size: 0.8em;
+      padding: 0.5em;
+    }
+
+    .icons {
+      -webkit-user-select: none;
+      color: $nav-green;
+      float: right;
+      display: none;
+      opacity: 0.75;
+
+      .flagged { color: #F58A29; }
+      .retweeted { color: #3BD4FB; }
+      .liked { color: #3BD4FB; }
+      &.tweet-hover { display: inline; }
+    }
+  }
+}

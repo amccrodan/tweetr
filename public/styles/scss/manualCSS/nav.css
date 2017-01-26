@@ -1,0 +1,48 @@
+#nav-bar {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding-left: 2em;
+  padding-right: 2em;
+  z-index: 1;
+}
+
+#nav-bar .logo {
+  height: 80px;
+  width: 80px;
+  float: left;
+}
+
+#nav-bar .bird-noise {
+  position: absolute;
+  -webkit-user-select: none;
+}
+
+#nav-bar .header {
+  font-size: 200%;
+  float: left;
+  line-height: 80px;
+  margin-left: 10px;
+}
+
+#nav-bar .right-nav {
+  float: right;
+  margin-top: 10px;
+  height: 75%;
+}
+
+#nav-bar .compose {
+  opacity: 0.75;
+  background-color: white;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#nav-bar .compose:hover {
+  opacity: 1.0;
+}

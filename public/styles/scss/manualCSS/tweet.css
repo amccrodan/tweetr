@@ -1,0 +1,70 @@
+#tweet-list article {
+  margin: 0 2em 1em;
+  border-radius: 5px;
+  padding: 0;
+  border: 1px solid #eee;
+}
+
+#tweet-list article:hover {
+  border-color: #666666;
+}
+
+#tweet-list .faded {
+  opacity: 0.5;
+}
+
+#tweet-list .tweet header {
+  background-color: #eee;
+  padding: 0.5em;
+  border-radius: 5px 5px 0 0;
+}
+
+#tweet-list .tweet .avatar {
+  vertical-align: top;
+}
+
+#tweet-list .tweet .author {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 0.3em;
+}
+
+#tweet-list .tweet .handle {
+  float: right;
+  color: #666666;
+}
+
+#tweet-list .tweet .tweet-body {
+  padding: 0.5em;
+  word-wrap: break-word;
+}
+
+#tweet-list .tweet footer {
+  border-top: 1px solid #eee;
+  font-size: 0.8em;
+  padding: 0.5em;
+}
+
+#tweet-list .tweet .icons {
+  -webkit-user-select: none;
+  color: #00a087;
+  float: right;
+  display: none;
+  opacity: 0.75;
+}
+
+#tweet-list .tweet .icons .flagged {
+  color: #F58A29;
+}
+
+#tweet-list .tweet .icons .retweeted {
+  color: #3BD4FB;
+}
+
+#tweet-list .tweet .icons .liked {
+  color: red;
+}
+
+#tweet-list .tweet .icons.tweet-hover {
+  display: inline;
+}
