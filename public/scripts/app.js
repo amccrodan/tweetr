@@ -34,14 +34,6 @@ $(function () {
     const $retweet = $("<i>").addClass("fa fa-retweet");
     const $heart = $("<i>").addClass("fa fa-heart").attr("data-tweet-id", tweetObject._id);
 
-    $heart.on("click", function () {
-      if ($(this).hasClass("liked")) {
-        $(this).removeClass("liked");
-      } else {
-        $(this).addClass("liked");
-      }
-    });
-
     const $likes = $("<span>").text(tweetObject.likes).addClass("likes");
 
     $icons.append($flag, " ", $retweet, " ", $heart, " ", $likes);
@@ -80,6 +72,7 @@ $(function () {
       method: "GET"
     }).then(function (data) {
       renderTweets(data);
+      $("#tweet-list").trigger("tweetsLoaded");
     });
   }
   loadTweets();
