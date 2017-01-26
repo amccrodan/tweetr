@@ -46,10 +46,19 @@
 }
 
 #tweet-list .tweet .icons {
+  -webkit-user-select: none;
   color: #00a087;
   float: right;
   display: none;
   opacity: 0.75;
+}
+
+#tweet-list .tweet .icons .flagged {
+  color: #F58A29;
+}
+
+#tweet-list .tweet .icons .retweeted {
+  color: #3BD4FB;
 }
 
 #tweet-list .tweet .icons .liked {
