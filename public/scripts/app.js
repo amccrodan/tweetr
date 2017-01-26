@@ -32,9 +32,19 @@ $(function () {
 
     const $flag = $("<i>").addClass("fa fa-flag");
     const $retweet = $("<i>").addClass("fa fa-retweet");
-    const $heart = $("<i>").addClass("fa fa-heart");
+    const $heart = $("<i>").addClass("fa fa-heart").attr("data-tweet-id", tweetObject._id);
 
-    $icons.append($flag, " ", $retweet, " ", $heart);
+    $heart.on("click", function () {
+      if ($(this).hasClass("liked")) {
+        $(this).removeClass("liked");
+      } else {
+        $(this).addClass("liked");
+      }
+    });
+
+    const $likes = $("<span>").text(tweetObject.likes).addClass("likes");
+
+    $icons.append($flag, " ", $retweet, " ", $heart, " ", $likes);
 
     $footer.append($tweetAge, $icons);
 
