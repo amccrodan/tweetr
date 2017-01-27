@@ -1,0 +1,53 @@
+#nav-bar {
+  background-color: $nav-green;
+  color: #e8fdff;
+  height: 80px;
+  left: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  .bird-noise {
+    -webkit-user-select: none;
+    position: absolute;
+  }
+
+  .compose {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 100%;
+    opacity: 0.75;
+    &:hover { opacity: 1.0; }
+  }
+
+  .header {
+    display: none;
+    float: left;
+    font-size: 200%;
+    line-height: 80px;
+    margin-left: 10px;
+
+    @media all and (min-width: $width-xs) {
+      display: inline;
+    }
+  }
+
+  .logo {
+    float: left;
+    height: 80px;
+    width: 80px;
+  }
+
+  .right-nav {
+    height: 75%;
+    margin-top: 10px;
+
+    @media all and (min-width: $width-xs) {
+      float: right;
+    }
+  }
+}

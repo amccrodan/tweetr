@@ -1,6 +1,3 @@
-$main-grey: #eee;
-$nav-green: #00a087;
-
 #tweet-list {
   article {
     margin: 0 2em 1em;
@@ -32,8 +29,11 @@ $nav-green: #00a087;
     }
 
     .handle {
-      float: right;
       color: #666666;
+
+      @media all and (min-width: 300px) {
+        float: right;
+      }
     }
 
     .tweet-body {
@@ -56,7 +56,7 @@ $nav-green: #00a087;
 
       .flagged { color: #F58A29; }
       .retweeted { color: #3BD4FB; }
-      .liked { color: #3BD4FB; }
+      .liked { color: red; }
       &.tweet-hover { display: inline; }
     }
   }
