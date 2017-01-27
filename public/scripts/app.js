@@ -8,7 +8,7 @@ $(function () {
 
   // Create tweet DOM representation
   function createHeader(tweetObject) {
-    const $header = $("<header>").addClass("faded");
+    const $header = $("<header>");
 
     const $avatar = $("<img>").attr("src", tweetObject.user.avatars.small).addClass("avatar");
     const $author = $("<span>").text(tweetObject.user.name).addClass("author");
@@ -81,15 +81,15 @@ $(function () {
   $(".new-tweet form").submit(function (event) {
     event.preventDefault();
 
-    const textArea = $(this).find("textarea");
-    const numChars = textArea.val().length;
+    const $textArea = $(this).find("textarea");
+    const numChars = $textArea.val().length;
 
     if (numChars > 140) {
       messageBox("Too many characters.", $(this));
       return;
     }
 
-    if (numChars === 0) {
+    if ($textArea.val().trim().length === 0) {
       messageBox("You may not submit an empty tweet.", $(this));
       return;
     }
@@ -103,7 +103,7 @@ $(function () {
     }).then(function () {
       clearTweets();
       $(".container .loading").hide();
-      textArea.val("").trigger("keyup");
+      $textArea.val("").trigger("keyup");
       loadTweets();
     });
   });
