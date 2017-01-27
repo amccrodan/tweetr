@@ -3,18 +3,6 @@ $(function() {
 
   $tweetList.on("tweetsLoaded", function () {
 
-    $tweetList.on("mouseenter", "article", function () {
-      const header = $(this).find($("header"));
-      const icons = $(this).find($(".icons"));
-      icons.addClass("tweet-hover");
-      header.removeClass("faded");
-    }).on("mouseleave", "article", function () {
-      const header = $(this).find($("header"));
-      const icons = $(this).find($(".icons"));
-      icons.removeClass("tweet-hover");
-      header.addClass("faded");
-    });
-
     const $flag = $tweetList.find(".fa-flag");
     const $retweet = $tweetList.find(".fa-retweet");
     const $heart = $tweetList.find(".fa-heart");
