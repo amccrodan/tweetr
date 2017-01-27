@@ -105,14 +105,16 @@ body {
   border: 1px solid #eee; }
   #tweet-list article:hover {
     border-color: #666666; }
-
-#tweet-list .faded {
-  opacity: 0.5; }
+    #tweet-list article:hover.tweet header {
+      opacity: 1; }
+    #tweet-list article:hover .icons {
+      display: inline; }
 
 #tweet-list .tweet header {
   background-color: #eee;
-  padding: 0.5em;
-  border-radius: 5px 5px 0 0; }
+  border-radius: 5px 5px 0 0;
+  opacity: 0.5;
+  padding: 0.5em; }
 
 #tweet-list .tweet .avatar {
   vertical-align: top; }
@@ -149,5 +151,3 @@ body {
     color: #3BD4FB; }
   #tweet-list .tweet .icons .liked {
     color: red; }
-  #tweet-list .tweet .icons.tweet-hover {
-    display: inline; }

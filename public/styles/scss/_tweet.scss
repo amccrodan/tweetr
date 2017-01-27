@@ -4,18 +4,25 @@
     border-radius: 5px;
     padding: 0;
     border: 1px solid $main-grey;
-    &:hover { border-color: #666666; }
-  }
+    &:hover {
+      border-color: #666666;
 
-  .faded {
-    opacity: 0.5;
+      &.tweet header {
+        opacity: 1;
+      }
+
+      .icons {
+        display: inline;
+      }
+    }
   }
 
   .tweet {
     header {
       background-color: $main-grey;
-      padding: 0.5em;
       border-radius: 5px 5px 0 0;
+      opacity: 0.5;
+      padding: 0.5em;
     }
 
     .avatar {
@@ -57,7 +64,6 @@
       .flagged { color: #F58A29; }
       .retweeted { color: #3BD4FB; }
       .liked { color: red; }
-      &.tweet-hover { display: inline; }
     }
   }
 }
