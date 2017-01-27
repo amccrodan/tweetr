@@ -9,5 +9,5 @@ function messageBox(displayString, $this) {
 
   $span.fadeOut(800, function () {
     $span.remove();
-  })
+  });
 }
