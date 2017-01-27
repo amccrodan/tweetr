@@ -25,7 +25,7 @@ module.exports = function makeDataHelpers(db) {
     },
 
     updateLikes: function(id, liked, callback) {
-      const o_id = new ObjectId(id);
+      const o_id = ObjectId(id);
 
       if (liked === "true") {
         db.collection("tweets").update({ _id : o_id }, { $inc: {likes: 1} });
