@@ -103,7 +103,7 @@ $(function () {
     }).then(function () {
       clearTweets();
       $(".container .loading").hide();
-      $textArea.val("").trigger("keyup");
+      $textArea.val("").trigger("input");
       loadTweets();
     });
   });
